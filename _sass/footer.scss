@@ -1,0 +1,28 @@
+footer { 
+  text-align: center; 
+  margin-top: 1rem;
+
+  color: black;
+  opacity: .5;
+
+  p.github{
+    font-variant: small-caps;
+
+    img {
+      margin-right: .5rem;
+    }
+
+    a, a:focus, a:visited {
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    a, a:hover, a:visited {
+      color: black;
+  
+      line-height: 32px;
+      display: inline-flex;
+    }
+    }
+}

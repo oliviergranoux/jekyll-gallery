@@ -1,0 +1,28 @@
+{% comment %}
+{% assign image-extension = include.extension | default: "jpg" %}
+{% endcomment %}
+
+{% for album in site.data.albums %}
+
+{% capture image-path %}{{ site.url-path }}/assets/images/albums/{{ album.folder }}/{{ album.images.first.filename }}{% endcapture %}
+{% capture image-path-thumb %}{{ image-path | replace: '.jpg', '-600w.jpg' }}{% endcapture %}
+
+{% comment %}
+{% capture image-path-thumb %}{{ image-path | replace: '-600w.jpg', '.jpg' }}{% endcapture %}
+{% endcomment %}
+
+<div>
+    <a href="{{ site.url-path }}/albums/{{ album.folder }}">
+        <figure>
+            <picture>
+                <source srcset="{{ image-path-thumb }}">
+                <img src="{{ image-path }}">
+            </picture>
+
+            {% if album.caption != "" %}
+            <figcaption>{{ album.caption }}</figcaption>
+            {% endif %}
+        </figure>
+    </a>
+</div>
+{% endfor %}

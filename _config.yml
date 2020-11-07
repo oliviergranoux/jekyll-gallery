@@ -1,0 +1,16 @@
+#url-path: "" #for website without path
+url-path: /jekyll-gallery #path of sample gallery on github
+
+# files to exclude from building
+exclude: [README.md]
+
+author: Olivier Granoux
+sitename: Jekyll Gallery Sample
+
+#translate labels if needed
+labels:
+  previous: Previous
+  next: Next
+  close: Close
+  albums: Albums
+  album: Album

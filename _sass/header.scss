@@ -1,0 +1,78 @@
+html body {
+  header {
+    @include layout-main;
+
+    font-family: serif;
+    text-align: center; 
+
+    @include responsive(medium-device) {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+
+    a {
+      text-decoration: none;
+
+      &:link, &:visited {
+        color: $color-text-dark;
+      }
+    }
+    
+    a h1 {
+      font-size: 2.6rem;
+      font-weight: 500; 
+      line-height: 1.2;
+      text-shadow: 2px 2px 2px $color-shadow-text;
+      
+      margin: .5rem 0;
+    
+      text-align: center;
+      align-items: center;
+
+      @include responsive(medium-device) {
+        display: inline-flex;
+        text-align: left;
+      }
+    }
+
+    nav {
+      font-size: 1.3rem;
+
+      @include responsive(medium-device) {
+        display: inline-flex;
+        text-align: right;
+        align-items: center;
+      }
+
+      ul {
+        text-align: center;
+        list-style-type: none;
+    
+        li {
+          display: inline;
+          margin: .2rem;
+        }
+
+        a {
+          &:link, &:visited {
+            color: $color-link;
+          }
+          
+          &:hover {
+            text-decoration: underline;
+          }
+    
+          &.selected {
+            color: $color-selected; 
+            
+            // display:none;
+            pointer-events: none;
+            cursor: default;
+            text-decoration: none;
+          }
+        }
+      }
+    }
+  }
+} 

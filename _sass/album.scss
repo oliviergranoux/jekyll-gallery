@@ -1,0 +1,63 @@
+$width-thumbnail: 500px;
+
+section#album {
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    justify-content: start;
+    align-content: center;
+
+    @include responsive(landscape-phone) {
+        flex-direction: row;
+    }
+
+    div.perfundo {
+        flex: 1 1 auto;
+        
+        @include responsive-width-images();
+
+        a.perfundo__link {
+            display:contents;
+            text-decoration: none;
+
+            figure {
+                max-width: $width-thumbnail;
+                margin: .5rem;
+                background: linear-gradient(to left, $color-from, $color-to);
+                box-shadow: 0 0 .5rem 0 $color-shadow-box;
+
+                line-height: 0;
+
+                &:hover{
+                    transform: scale(1.01);
+                }
+            
+                img, picture img {
+                    width: 100%;
+                    max-height: 10em;
+                    object-fit: cover;
+                }
+                
+                figcaption {
+                    font-size: 1.2rem;
+                    text-align: center;
+                    color: $color-text-light;
+                    padding: 0.4rem 1rem 1rem 1rem;
+
+                    line-height: 1.5;
+                }
+            }
+        }
+
+        div.perfundo__overlay  {
+            figure {
+                figcaption{
+                    a, a:link, a:visited {
+                        color: $color-text-light;
+                    }
+                }
+            }
+        }
+       
+    }
+}

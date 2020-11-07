@@ -1,0 +1,52 @@
+$width-thumbnail: 500px;
+
+section#albums {
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-content: center;
+
+    @include responsive(landscape-phone) {
+        flex-direction: row;
+    }
+
+    div {
+        flex: 1 1 auto;
+
+        @include responsive-width-images();
+
+        a {
+            display:contents;
+            text-decoration: none;
+
+            figure {
+                max-width: 100%;
+                margin: .5rem;
+                background: linear-gradient(20deg, $color-from 0%, $color-to 100%);
+                box-shadow: 0 0 .5rem 0 $color-shadow-box;
+            
+                line-height: 0;
+
+                &:hover{
+                    transform: scale(1.01);
+                }
+                
+                img {
+                    width: 100%;
+                    max-height: 10em;
+                    object-fit: cover;
+                }
+                
+                figcaption {
+                    font-size: 1.2rem;
+                    text-align: center;
+                    font-variant: small-caps;
+                    color: $color-text-dark;
+                    padding: 0.8rem 1rem 1rem 1rem;
+                    line-height: 1.5;
+                }
+            }
+        }
+    }
+}

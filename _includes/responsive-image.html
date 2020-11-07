@@ -1,0 +1,49 @@
+{% comment %}
+{% assign image-extension = include.extension | default: "jpg" %}
+{% endcomment %}
+
+{% assign previous-index = 0 %}
+
+{% for album in site.data.albums %}
+{% if album.folder != page.folder %}
+    {% continue %}
+{% endif %}
+
+{% capture folder-path %}{{ site.url-path }}/assets/images/albums/{{ page.folder }}{% endcapture %}
+
+{% for image in album.images %}
+
+{% capture image-path %}{{ folder-path }}/{{ image.filename }}{% endcapture %}
+{% capture image-path-600w %}{{ image-path | replace: '.jpg', '-600w.jpg' }}{% endcapture %}
+{% capture image-path-1200w %}{{ image-path | replace: '.jpg', '-1200w.jpg' }}{% endcapture %}
+
+<div class="perfundo">
+    <a class="perfundo__link" href="#img-{{ forloop.index0 }}">
+        <figure>
+            <img src="{{ image-path-600w }}" alt="{{ image.caption }}">
+        </figure>
+    </a>
+    <div id="img-{{ forloop.index0 }}" class="perfundo__overlay fadeInLeft">
+        <figure class="perfundo__content perfundo__figure">
+            <picture>
+                <source media="(max-width: 767px)" srcset="{{ image-path-600w }}">
+                <img src="{{ image-path-1200w }}" alt="{{ image.caption }}" class="perfundo__image">
+            </picture>
+            {% if image.caption != "" %}
+            <figcaption class="perfundo__figcaption">{{ image.caption }}</figcaption>
+            {% endif %}
+        </figure>
+        {% unless forloop.first %}
+        <a class="perfundo__prev perfundo__control" href="#img-{{ previous-index }}">{{ site.labels.previous }}</a>
+        {% endunless %}
+        <a href="" class="perfundo__close perfundo__control">{{ site.labels.close }}</a>
+        {% unless forloop.last %}
+        <a class="perfundo__next perfundo__control" href="#img-{{ forloop.index }}">{{ site.labels.next }}</a>
+        {% endunless %}
+    </div>
+</div>
+
+{% assign previous-index = forloop.index0 %}
+
+{% endfor %}
+{% endfor %}

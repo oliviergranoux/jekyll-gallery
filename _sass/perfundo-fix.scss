@@ -1,0 +1,44 @@
+$max-width: 70%;
+$margin-right-left: (100% - $max-width) / 2;
+
+section#album {
+  .perfundo {
+    .perfundo__overlay {
+      background: $color-neutral-dark !important;
+      position: fixed !important;
+    }
+    
+    figure.perfundo__figure {
+      text-align: center;
+
+      img, figcaption.perfundo__figcaption {
+        position: absolute;
+
+        max-width: $max-width; 
+        
+        left: 0;
+        right: 0;
+      }
+
+      img {
+        height: auto !important;
+        max-height: calc(99% - 5em) !important;
+        top: 5em;
+        margin-right: auto;
+        margin-left: auto;
+      } 
+  
+      figcaption.perfundo__figcaption {
+        text-align: center !important;
+        top: 1.7em;
+        margin-left: $margin-right-left; /* used value instead of auto for IE */
+        margin-right: $margin-right-left; /* used value instead of auto for IE */
+      }
+    }
+    
+    a.perfundo__next, a.perfundo__prev {
+      opacity: 1 !important;
+    }
+
+  }
+}

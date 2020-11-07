@@ -1,0 +1,63 @@
+$width-landscape-phone: 576px;
+$width-medium-device: 768px;
+$width-desktop: 992px;
+$width-large-desktop: 1200px;
+
+/* 
+Bootstrap 4 breakpoints
+Extra small devices (portrait phones) 
+No media query since this is the default in Bootstrap because it is "mobile first"
+*/
+
+@mixin responsive($width) {
+  @if $width == landscape-phone {
+    @media only screen and (min-width: $width-landscape-phone) {
+      @content;
+    }
+  }
+  @else if $width == medium-device {
+    @media only screen and (min-width: $width-medium-device) {
+      @content;
+    }
+  }
+  @else if $width == desktop {
+    @media only screen and (min-width: $width-desktop) {
+      @content;
+    }
+  }
+  @else if $width == large-desktop {
+    @media only screen and (min-width: $width-large-desktop) {
+      @content;
+    }
+  }
+}
+
+@mixin specific-browser($browser) {
+  @if $browser == firefox {
+    @media only screen and (min--moz-device-pixel-ratio:0) and (min-resolution: 3e1dpcm) {
+      @content;
+    }
+  }
+}
+
+@mixin responsive-width-images() {
+  /* hack - Chrome seems to not accept width: auto like Firefox does */
+  max-width: $width-thumbnail;
+  width: 100%;
+
+  @include responsive(landscape-phone) {
+      width: 50%;
+  }
+  
+  @include responsive(medium-device) {
+      width: 33%;
+  }
+
+  @include responsive(desktop) {
+      width: 25%;
+  }
+
+  @include specific-browser(firefox) {
+      width: auto !important;
+  }
+}

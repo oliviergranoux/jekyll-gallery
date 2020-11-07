@@ -1,0 +1,56 @@
+#each folder is define with a folder, captio (optional) and a list of images
+- folder: trinity-kubassek
+  caption: "Trinity Kubassek"
+  # each image has a filename (the original image filename) and an optional caption
+  # order is important for the order of images in albums and the first image is also use as thumbnail for the list of albums
+  images:
+  - filename: "StockSnap_H8UBNZ7GK1.jpg"
+    caption: "Microphone - <a href='https://stocksnap.io/author/trinity' title='Trinity Kubassek'>by Trinity Kubassek from StockSnap</a>"
+  - filename: "StockSnap_IWAASXPNPZ.jpg"
+    caption: "Sunset - <a href='https://stocksnap.io/author/trinity' title='Trinity Kubassek'>by Trinity Kubassek from StockSnap</a>"
+  - filename: "StockSnap_MLUHM6YETW.jpg"
+    caption: "Beach - <a href='https://stocksnap.io/author/trinity' title='Trinity Kubassek'>by Trinity Kubassek from StockSnap</a>"
+  - filename: "StockSnap_PZC8QNTP4Z.jpg"
+    caption: "Children - <a href='https://stocksnap.io/author/trinity' title='Trinity Kubassek'>by Trinity Kubassek from StockSnap</a>"
+  - filename: "StockSnap_Q2ZMHVIPYQ.jpg"
+    caption: "Cow - <a href='https://stocksnap.io/author/trinity' title='Trinity Kubassek'>by Trinity Kubassek from StockSnap</a>"
+  - filename: "StockSnap_QNQ5HNPDTJ.jpg"
+    caption: "Sheep - <a href='https://stocksnap.io/author/trinity' title='Trinity Kubassek'>by Trinity Kubassek from StockSnap</a>"
+  - filename: "StockSnap_UT7IO1NLVQ.jpg"
+    caption: "Dog - <a href='https://stocksnap.io/author/trinity' title='Trinity Kubassek'>by Trinity Kubassek from StockSnap</a>"
+  - filename: "StockSnap_XI1A9JKHK0.jpg"
+    caption: "No trepassing - <a href='https://stocksnap.io/author/trinity' title='Trinity Kubassek'>by Trinity Kubassek from StockSnap</a>"
+
+- folder: humphrey-muleba
+  caption: "Humphrey Muleba"
+  images:
+  - filename: "StockSnap_W9LWWZEVU0.jpg"
+    caption: "Photo by <a href='https://stocksnap.io/author/humphreymuleba'>Humphrey Muleba</a> from <a href='https://stocksnap.io'>StockSnap</a>"
+  - filename: "StockSnap_TIHQMAG3KH.jpg"
+    caption: "Photo by <a href='https://stocksnap.io/author/humphreymuleba'>Humphrey Muleba</a> from <a href='https://stocksnap.io'>StockSnap</a>"
+  - filename: "StockSnap_26OLIALPKJ.jpg"
+    caption: "Photo by <a href='https://stocksnap.io/author/humphreymuleba'>Humphrey Muleba</a> from <a href='https://stocksnap.io'>StockSnap</a>"
+  - filename: "StockSnap_CFDRMTWPOE.jpg"
+    caption: "Photo by <a href='https://stocksnap.io/author/humphreymuleba'>Humphrey Muleba</a> from <a href='https://stocksnap.io'>StockSnap</a>"
+  - filename: "StockSnap_DPQKQ0FJK1.jpg"
+    caption: "Photo by <a href='https://stocksnap.io/author/humphreymuleba'>Humphrey Muleba</a> from <a href='https://stocksnap.io'>StockSnap</a>"
+  - filename: "StockSnap_FJK8M75ELF.jpg"
+    caption: "Photo by <a href='https://stocksnap.io/author/humphreymuleba'>Humphrey Muleba</a> from <a href='https://stocksnap.io'>StockSnap</a>"
+  - filename: "StockSnap_LNCLN1NE6K.jpg"
+    caption: "Photo by <a href='https://stocksnap.io/author/humphreymuleba'>Humphrey Muleba</a> from <a href='https://stocksnap.io'>StockSnap</a>"
+  - filename: "StockSnap_MBGMKPIOHZ.jpg"
+    caption: "Photo by <a href='https://stocksnap.io/author/humphreymuleba'>Humphrey Muleba</a> from <a href='https://stocksnap.io'>StockSnap</a>"
+
+- folder: frances-gunn
+  caption: "Frances Gunn"
+  images:
+  - filename: "StockSnap_04SDP2ULVG.jpg"
+    caption: "Photo by <a href='https://stocksnap.io/author/49990'>Frances Gunn</a> from <a href='https://stocksnap.io'>StockSnap</a>"
+  - filename: "StockSnap_4AQEUP2PRE.jpg"
+    caption: "Photo by <a href='https://stocksnap.io/author/49990'>Frances Gunn</a> from <a href='https://stocksnap.io'>StockSnap</a>"
+  - filename: "StockSnap_80K01V0IOM.jpg"
+    caption: "Photo by <a href='https://stocksnap.io/author/49990'>Frances Gunn</a> from <a href='https://stocksnap.io'>StockSnap</a>"
+  - filename: "StockSnap_N82MAGQZNO.jpg"
+    caption: "Photo by <a href='https://stocksnap.io/author/49990'>Frances Gunn</a> from <a href='https://stocksnap.io'>StockSnap</a>"
+  - filename: "StockSnap_Q9PZ2MMWS9.jpg"
+    caption: "Photo by <a href='https://stocksnap.io/author/49990'>Frances Gunn</a> from <a href='https://stocksnap.io'>StockSnap</a>"

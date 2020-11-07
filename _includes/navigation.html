@@ -1,0 +1,20 @@
+<nav>
+    <ul>
+        {% for item in site.data.navigation %}
+        
+        <li>
+            {% if page.url == item.link or (item.is-default and page.url == "/")  %}
+            <a href="{{ site.url-path }}{{ item.link }}" class="selected">{{ item.name }}</a>
+            {% else %}
+            <a href="{{ site.url-path }}{{ item.link }}" class="{{ is-album-select-class }}">{{ item.name }}</a>
+            {% endif %}
+        </li>
+        {% if item.name == "Albums" and page.url contains "/albums/" %}
+        &nbsp;>&nbsp;
+        <li>
+            <a href="#" class="selected">{{ page.title }}</a>
+        </li>
+        {% endif %}
+        {% endfor %}
+    </ul>
+</nav>

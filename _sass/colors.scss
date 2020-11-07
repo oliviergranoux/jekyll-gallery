@@ -1,0 +1,19 @@
+$color-cookie: #957465;
+$color-mustard: #edd989;
+$color-olive: #a6a971;
+$color-neutral-dark: #000;
+$color-neutral-light: #fff;
+
+$color-background: lighten($color-mustard, 25%);
+
+$color-text-light: $color-neutral-light;
+$color-text-dark: darken($color-olive, 15%);
+
+$color-shadow-box: lighten($color-neutral-dark, 25%);
+$color-shadow-text: lighten($color-neutral-dark, 82.5%);
+
+$color-link: $color-olive;
+$color-selected: darken($color-olive, 35%);
+
+$color-from: lighten($color-olive, 20%);
+$color-to: lighten($color-olive, 30%);
