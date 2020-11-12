@@ -1,3 +1,5 @@
+{% assign force-refreshing-cache = site.time | date: '%Y%m%d%H%M' %}
+
 <!doctype html>
 <html>
   <head>
@@ -7,8 +9,8 @@
     <meta name="date" content="{{ site.time | date: '%Y-%m-%d' }}T00:00:00+01:00">
     <meta name="viewport" content="width=device-width,initial-scale=1">
 
-    <link rel="stylesheet" href="{{ site.url-path }}/assets/css/styles.css">
-    <link rel="stylesheet" href="{{ site.url-path }}/assets/css/perfundo.with-icons.min.css">
+    <link rel="stylesheet" href="{{ site.url-path }}/assets/css/styles.css?{{ force-refreshing-cache }}">
+    <link rel="stylesheet" href="{{ site.url-path }}/assets/css/perfundo.with-icons.min.css?{{ force-refreshing-cache }}">
     
     <link rel="apple-touch-icon" sizes="180x180" href="{{ site.url-path }}/assets/favicons/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="{{ site.url-path }}/assets/favicons/favicon-32x32.png">
