@@ -22,12 +22,23 @@ html {
   line-height: 1.5;
   background: $color-background;
   color: $color-text-dark;
-} 
+}
+
+html, body {
+  height: 100%;
+  margin:0;
+  padding:0;
+}
 
 @import "header";
 
-main > section {
-  @include layout-main;
+main {
+  min-height: calc(100% - 12rem);
+
+  section {
+    @include layout-main;
+  }
+ 
 }
 
 @import "albums";

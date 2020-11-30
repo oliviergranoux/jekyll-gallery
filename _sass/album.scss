@@ -4,7 +4,7 @@ section#album {
     display: flex;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
-    justify-content: start;
+    justify-content: flex-start;
     align-content: center;
 
     @include responsive(landscape-phone) {
