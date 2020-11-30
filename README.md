@@ -100,7 +100,7 @@ sudo apt-get install imagemagick
 2. After that, navigate to the folder of your images, create a temporary folder `new` and execute for example this command line:
 
 ```
-for file in *.jpg; do convert $file -resize '600' -set filename:base "%[basename]" "new/%[filename:base]-600w.jpg"; done;
+for file in *.jpg; do convert $file -resize '600' -quality 75 -strip -set filename:base "%[basename]" "new/%[filename:base]-600w.jpg"; done;
 ```
 
 This command line will resize all `*.jpg` images of the current folder with a width of 600px while maintening the ratio of images. All new images will be saved in 'new' folder with the suffix '-600w' in the filename. For explanation of line, you can check on the [documentation of ImageMagick](http://www.imagemagick.org/script/command-line-processing.php#geometry).
@@ -108,10 +108,12 @@ This command line will resize all `*.jpg` images of the current folder with a wi
 _Note:_ for small images which need to be enlarged, you have to use the following command (just change `-resize` option). Do not use it with images that need to be reduced: I noticed that will not reduce the size of generated image.
 
 ```
-for file in *.jpg; do convert $file -resize '600x<' -set filename:base "%[basename]" "new/%[filename:base]-600w.jpg"; done;
+for file in *.jpg; do convert $file -resize '600x<' -quality 75 -strip -set filename:base "%[basename]" "new/%[filename:base]-600w.jpg"; done;
 ```
 
 _Note:_ this command line work only for `*.jpg` files and not `*.JPG` files. Plese adapt this line for each size wanted.
+
+_Update (November 30, 2020):_ added the parameter `-quality 75 -strip` to optimize the size of images.
 
 ## Author
 [Olivier Granoux](http://olivier.granoux.com)
