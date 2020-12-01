@@ -58,10 +58,20 @@ _Notes:_
 
 | width       | suffix       |
 | ----------- | ------------ |
-| 600 px      | `-600w`      |
+| 500 px      | `-500w`      |
+| 700 px      | `-700w`      |
+| 800 px      | `-800w`      |
 | 1200 px     | `-1200w`     |
 
-_Note:_ I have voluntarily limited the format of images for optimisation. Indeed the page of each album will download all its images, including format used to display in full screen. Thus, it can dramatically increase the size of download with large format (like 2400px).
+* Depending of screen width, we select a different image size to be responsive and thus reduce the size of downloading while displaying the page of an album (using thumbnails) and displaying the page with a specific image.
+
+| screen width range  | thumbnails | large size |
+| ------------------- | ---------- | ---------- |
+| [ 0px .. 576px [    | 500px      | 500px      |
+| [ 576px .. 768px [  | 500px      | 500px      |
+| [ 768px .. 992px [  | 700px      | 700px      |
+| [ 992px .. 1200px [ | 800px      | 800px      |
+| [ 1200px .. n [     | 500px      | 1200px     |
 
 See below how to [resize images](#resizing-images-in-batch).
 . The original image is not needed for the site, leave it only if you want to keep the original format.
