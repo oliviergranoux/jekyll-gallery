@@ -14,20 +14,31 @@
 {% for image in album.images %}
 
 {% capture image-path %}{{ folder-path }}/{{ image.filename }}{% endcapture %}
-{% capture image-path-600w %}{{ image-path | replace: '.jpg', '-600w.jpg' }}{% endcapture %}
+{% capture image-path-500w %}{{ image-path | replace: '.jpg', '-500w.jpg' }}{% endcapture %}
+{% capture image-path-700w %}{{ image-path | replace: '.jpg', '-700w.jpg' }}{% endcapture %}
+{% capture image-path-800w %}{{ image-path | replace: '.jpg', '-800w.jpg' }}{% endcapture %}
 {% capture image-path-1200w %}{{ image-path | replace: '.jpg', '-1200w.jpg' }}{% endcapture %}
 
 <div class="perfundo">
     <a class="perfundo__link" href="#img-{{ forloop.index0 }}">
         <figure>
-            <img src="{{ image-path-600w }}" alt="{{ image.caption }}">
+            <picture>
+                <source media="(max-width: 767px)" srcset="{{ image-path-500w }}">
+                <source media="(min-width: 768px) and (max-width: 991px)" srcset="{{ image-path-700w }}">
+                <source media="(min-width: 992px) and (max-width: 1199px)" srcset="{{ image-path-800w }}">
+                <source media="(min-width: 1200px)" srcset="{{ image-path-500w }}">
+                <img src="{{ image-path-500w }}" alt="{{ image.caption }}">">
+              </picture>
         </figure>
     </a>
     <div id="img-{{ forloop.index0 }}" class="perfundo__overlay fadeInLeft">
         <figure class="perfundo__content perfundo__figure">
             <picture>
-                <source media="(max-width: 767px)" srcset="{{ image-path-600w }}">
-                <img src="{{ image-path-1200w }}" alt="{{ image.caption }}" class="perfundo__image">
+                <source media="(max-width: 767px)" srcset="{{ image-path-500w }}">
+                <source media="(min-width: 768px) and (max-width: 991px)" srcset="{{ image-path-700w }}">
+                <source media="(min-width: 992px) and (max-width: 1199px)" srcset="{{ image-path-800w }}">
+                <source media="(min-width: 1200px)" srcset="{{ image-path-1200w }}">
+                <img src="{{ image-path-500w }}" alt="{{ image.caption }}" class="perfundo__image">
             </picture>
             {% if image.caption != "" %}
             <figcaption class="perfundo__figcaption">{{ image.caption }}</figcaption>

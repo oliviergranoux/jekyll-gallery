@@ -5,11 +5,7 @@
 {% for album in site.data.albums %}
 
 {% capture image-path %}{{ site.url-path }}/assets/images/albums/{{ album.folder }}/{{ album.images.first.filename }}{% endcapture %}
-{% capture image-path-thumb %}{{ image-path | replace: '.jpg', '-600w.jpg' }}{% endcapture %}
-
-{% comment %}
-{% capture image-path-thumb %}{{ image-path | replace: '-600w.jpg', '.jpg' }}{% endcapture %}
-{% endcomment %}
+{% capture image-path-thumb %}{{ image-path | replace: '.jpg', '-500w.jpg' }}{% endcapture %}
 
 <div>
     <a href="{{ site.url-path }}/albums/{{ album.folder }}">
